@@ -41,7 +41,7 @@ contract ballot {
      }
      
      modifier onlyOfficial(){
-        require( msg.sender== ballotOfficialAddress);      //only ballotOfficialAddress can call this 
+        require( msg.sender== ballotOfficialAddress,"You are not eligible");      //only ballotOfficialAddress can call this 
         _;
      }
      
